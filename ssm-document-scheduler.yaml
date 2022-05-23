@@ -20,6 +20,7 @@ parameters:
     type: "String"
     description: "Canal NF2"
     allowedValues:
+    - Selecione
     - IntPF
     - IntPJ
     - IntPJAta
@@ -30,6 +31,7 @@ parameters:
     type: "String"
     description: "Zona de disponibilidade"
     allowedValues:
+    - Selecione    
     - AzA
     - AzB
     - AzC
@@ -38,6 +40,7 @@ parameters:
     type: "String"
     description: "Dia no formato GMT"
     allowedValues:
+    - "Selecione"    
     - "1"
     - "2"
     - "3"
@@ -73,6 +76,7 @@ parameters:
     type: "String"
     description: "Mês no formato GMT"
     allowedValues:
+    - "Selecione"       
     - "1"
     - "2"
     - "3"
@@ -89,6 +93,7 @@ parameters:
     type: "String"
     description: "Ano no formato GMT"
     allowedValues:
+    - "Selecione"     
     - "2022"
     - "2023"
     - "2024"
@@ -97,6 +102,7 @@ parameters:
     type: "String"
     description: "Hora no formato GMT"
     allowedValues:       
+    - "Selecione"      
     - "0"
     - "1"
     - "2"
@@ -125,6 +131,7 @@ parameters:
     type: "String"
     description: "Minutos no formato GMT"
     allowedValues:  
+    - "Selecione"    
     - "0"
     - "15"
     - "30"   
