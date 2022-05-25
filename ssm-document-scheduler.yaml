@@ -21,12 +21,8 @@ parameters:
     description: "Canal NF2"
     allowedValues:
     - Selecione
-    - IntPF
-    - IntPJ
-    - IntPJAta
-    - MobPF
-    - MobEmp
-    - MobCart
+    - Internet
+    - Mobile
   Az:
     type: "String"
     description: "Zona de disponibilidade"
@@ -164,7 +160,7 @@ mainSteps:
 
         echo "- Consulta eventos: Sigla: ${sigla} - Canal: ${channel} - Az: ${availabilityZone} "
 
-        aws events list-rules --query "Rules[?Description!=\`null\`]|[?contains(Description, \`${sigla};${channel};${availabilityZone}\`) == \`true\`].[Name,Description]" --output text \
+        aws events list-rules --query "Rules[?Description!=\`null\`]|[?starts_with(Description, \`${sigla};${availabilityZone};${channel};\`) == \`true\`].[Name,Description]" --output text \
             | awk '{print $1 "|" $2}' \
             | while read ruleNameAndDescription;
             do     
